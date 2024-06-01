@@ -1,5 +1,11 @@
-import "@/styles/globals.css";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+import "@/styles/globals.css";
+import { ToDolistProvider } from "../components/toDolistApp";
+const MyApp = ({ Component, pageProps }) => (
+  <ToDolistProvider>
+    <div>
+      <Component {...pageProps} />;
+    </div>
+  </ToDolistProvider>
+);
+export default MyApp;
